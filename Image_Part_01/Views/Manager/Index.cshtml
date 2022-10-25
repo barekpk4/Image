@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+<div class="col-12">
+
+<h1 class="alert alert-info">File Upload Manager</h1>
+<h1 class="text-primary text-center">@ViewBag.msg</h1>
+</div>
+</div>
+
+<div class="row">
+    <div class="col-4">
+     <form asp-action="UploadFile" asp-controller="Manager" enctype="multipart/form-data" method="post">
+  <label>File :</label>
+         <input type="file" name="fileToUpload" value="" class="form-control"/>
+         <button type="submit" class="btn btn-primary mt-2">Upload</button>
+
+     </form>
+    </div>
+</div>
+
